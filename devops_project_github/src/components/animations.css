@@ -1,0 +1,457 @@
+/* Animation keyframes */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-30vh) rotate(360deg);
+  }
+  100% {
+    transform: translateY(-100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes float-reverse {
+  0% {
+    transform: translateY(-20vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-50vh) rotate(-360deg);
+  }
+  100% {
+    transform: translateY(-100vh) rotate(-720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Advanced Modern Text Animations */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes text-reveal {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: rgba(96, 165, 250, 0.75); }
+}
+
+/* Footer animations */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px 0px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 15px 5px rgba(59, 130, 246, 0.7);
+  }
+}
+
+@keyframes reveal-slide {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Mobile-friendly animations */
+@keyframes mobile-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+@keyframes mobile-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px 0px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 10px 2px rgba(59, 130, 246, 0.7);
+  }
+}
+
+@keyframes mobile-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes tap-feedback {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(0.92);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes tap-glow {
+  0% {
+    box-shadow: 0 0 0px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 12px 4px rgba(59, 130, 246, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 4px 1px rgba(59, 130, 246, 0.4);
+  }
+}
+
+@keyframes tap-highlight {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: rgba(59, 130, 246, 0.15);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes particle-mobile-float {
+  0%, 100% {
+    transform: translateY(0) translateX(5px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-5px);
+  }
+}
+
+/* Animation classes */
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 20s infinite linear;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 25s infinite linear;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+.animate-blink {
+  animation: blink 1.5s infinite;
+}
+
+/* Advanced Modern Text Animations */
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+.animate-text-reveal {
+  animation: text-reveal 1s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+
+.animate-typing {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+.animate-glow {
+  animation: glow 2.5s ease-in-out infinite;
+}
+
+.animate-reveal {
+  animation: reveal-slide 1s forwards;
+}
+
+/* Mobile-specific animations */
+.animate-mobile-pulse {
+  animation: mobile-pulse 2s infinite;
+}
+
+.animate-mobile-glow {
+  animation: mobile-glow 2s infinite;
+}
+
+.animate-mobile-float {
+  animation: mobile-float 3s ease-in-out infinite;
+}
+
+.animate-tap-feedback {
+  animation: tap-feedback 0.4s forwards;
+}
+
+.animate-tap-glow {
+  animation: tap-glow 0.6s forwards;
+}
+
+.animate-tap-highlight {
+  animation: tap-highlight 0.7s forwards;
+}
+
+.animate-particle-mobile {
+  animation: particle-mobile-float 3s infinite ease-in-out;
+}
+
+/* Touch device detection - using media query for touch screens */
+@media (hover: none) {
+  /* Override hover animations with touch-friendly animations */
+  .hover-glow {
+    animation: mobile-glow 2.5s infinite !important;
+  }
+  
+  .hover-scale {
+    animation: mobile-pulse 3s infinite !important;
+  }
+  
+  .group:active .group-hover\:scale-105 {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+  }
+  
+  .active\:scale-95:active {
+    transform: scale(0.95);
+  }
+  
+  /* Ensure some animations always run on mobile */
+  .mobile-animate-always {
+    animation: mobile-pulse 3s infinite !important;
+  }
+  
+  /* Add active state animations for mobile */
+  [class*="hover\:"]:active {
+    animation: tap-feedback 0.3s forwards;
+  }
+}
+
+/* Touch device detection - Improved with modern feature detection */
+@media (hover: none) and (pointer: coarse) {
+  /* Override hover animations with touch-friendly animations */
+  .hover-glow {
+    animation: mobile-glow 2.5s infinite !important;
+  }
+  
+  .hover-scale {
+    animation: mobile-pulse 3s infinite !important;
+  }
+  
+  /* Buttons and interactive elements with hover states */
+  .hover\:bg-blue-600:active,
+  .hover\:bg-blue-700:active,
+  .hover\:bg-purple-600:active,
+  .hover\:bg-purple-700:active,
+  .hover\:bg-gray-700:active,
+  .hover\:bg-gray-800:active {
+    animation: tap-highlight 0.7s forwards;
+  }
+  
+  .hover\:shadow-lg:active,
+  .hover\:shadow-xl:active {
+    animation: tap-glow 0.6s forwards;
+  }
+  
+  .group:active .group-hover\:scale-105 {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+  }
+  
+  .active\:scale-95:active {
+    transform: scale(0.95);
+  }
+  
+  /* Ensure some animations always run on mobile */
+  .mobile-animate-always {
+    animation: mobile-pulse 3s infinite !important;
+  }
+  
+  /* Add active state animations for mobile */
+  [class*="hover\:"]:active {
+    animation: tap-feedback 0.4s forwards;
+  }
+  
+  /* Make cards touchable with feedback */
+  .card:active,
+  .clickable-item:active,
+  [role="button"]:active {
+    animation: tap-feedback 0.4s forwards;
+  }
+  
+  /* Special handling for icon buttons */
+  .icon-btn:active {
+    animation: tap-glow 0.6s forwards;
+  }
+  
+  /* Replace hover glow effects with tap glow on mobile */
+  .hover\:shadow-glow:active,
+  .hover\:glow:active,
+  .glow-on-hover:active {
+    animation: tap-glow 0.6s forwards !important;
+  }
+}
+
+/* Apply mobile animations to mouse devices on mobile viewport sizes for testing */
+@media (max-width: 768px) {
+  .mobile-effect-test .hover-glow {
+    animation: mobile-glow 2.5s infinite !important;
+  }
+  
+  .mobile-effect-test .hover-scale {
+    animation: mobile-pulse 3s infinite !important;
+  }
+  
+  .mobile-effect-test [class*="hover\:"]:active {
+    animation: tap-feedback 0.4s forwards !important;
+  }
+}
+
+/* Add line clamp utility */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Modern line clamp using the newer standard method */
+.modern-line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--lines, 2);
+  line-clamp: var(--lines, 2);
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  overflow: hidden;
+  
+  /* Modern browsers - supporting CSS property */
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  
+  /* Fallback for browsers that don't support line-clamp */
+  max-height: calc(var(--line-height, 1.5em) * var(--lines, 2));
+}
+
+/* Force touch behaviors */
+.touch-effect {
+  -webkit-tap-highlight-color: transparent; /* Remove default tap highlight */
+}
+
+.touch-glow:active {
+  animation: tap-glow 0.6s forwards !important;
+}
+
+.touch-scale:active {
+  animation: tap-feedback 0.4s forwards !important;
+}
+
+.touch-highlight:active {
+  animation: tap-highlight 0.7s forwards !important;
+}
