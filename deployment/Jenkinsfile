@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git branch: 'main', url: 'https://github.com/Varunmathiazhagan/devops_review.git'
+                git 'https://github.com/Varunmathiazhagan/devops_review.git'
             }
         }
 
@@ -26,7 +26,7 @@ pipeline {
 
         stage('Build Frontend Image') {
             steps {
-                dir('frontend') { // updated if frontend is in a subfolder
+                dir('frontend') {
                     script {
                         docker.build(env.FRONTEND_IMAGE, '.')
                     }
