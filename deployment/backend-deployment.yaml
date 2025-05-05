@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: devforge-backend
-        image: devforge/devforge-backend:latest
+        image: varun4546/devforge-backend:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
