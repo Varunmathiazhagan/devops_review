@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: devforge-frontend
-        image: devforge/frontend:latest
+        image: devforge/devforge-frontend:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
