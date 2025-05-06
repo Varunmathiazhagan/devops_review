@@ -3,7 +3,7 @@ const cors = require('cors');
 const { MongoClient } = require('mongodb');
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port =   5000;
 
 // MongoDB connection string
 const uri = "mongodb+srv://mvarunmathi2004:4546@devforge.r6jxddm.mongodb.net/?retryWrites=true&w=majority&appName=devforge";
