@@ -73,7 +73,7 @@ const Contact = () => {
     
     try {
       // Updated axios request with proper headers
-      await axios.post('http://localhost:5000/api/contact', formData, {
+      await axios.post('http://10.111.136.158:5000/api/contact', formData, {
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
